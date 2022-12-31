@@ -1,0 +1,117 @@
+.grid {
+    display: grid;
+    grid-gap: 5%;
+}
+.game {
+    grid-template-columns: [start] repeat(6, 1fr) [middle] repeat(6, 1fr) [end];
+    grid-template-rows: 1fr 1fr 4fr;
+    max-width: 1000px;
+
+}
+div {
+    border: 5px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/*TOP ROW: DICE ROLL DETAILS*/
+.dice {
+    border: 5px solid grey;
+    grid-row: 1;
+    grid-column: start / middle;
+    grid-template-columns: repeat(6,1fr);
+
+}
+.roll {
+    border: 5px solid grey;
+    grid-row: 1;
+    grid-column: middle / end;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100%;
+}
+.chosen, .discard {
+    border: 5px solid grey;
+}
+
+/*SECOND ROW: COUNTS AND SCORES*/
+.counts {
+    border: 5px solid grey;
+    grid-row: 2;
+    grid-column: start / middle;  
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.rounds, .rerolls, .plusones {
+    border: 5px solid grey;
+}
+.scores {
+    border: 5px solid grey;
+    grid-row: 2;
+    grid-column: middle / end; 
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(6,1fr);
+
+}   
+
+/*BOTTOM ROW: GAMEBOARD*/
+.boards {
+    border: 5px solid grey;
+    grid-row: 3;
+    grid-column: start / end; 
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+        "a b"
+        "a b"
+        "c c"
+        "d d"
+        "e e";
+}
+#yellow {
+    grid-area: a;
+    border: 5px solid yellow;
+}
+#blue {
+    grid-area: b;
+    border: 5px solid blue;
+}
+#green {
+    grid-area: c;
+    border: 5px solid green;
+}
+#orange {
+    grid-area: d;
+    border: 5px solid orange;
+}
+#purple {
+    grid-area: e;
+    border: 5px solid purple;
+}
+
+/*GENERAL STYLING*/
+
+.yellow {
+    border: 5px solid yellow;
+}
+.blue {
+    border: 5px solid blue;
+}
+.green {
+    border: 5px solid green;
+}
+.orange {
+    border: 5px solid orange;
+}
+.purple {
+    border: 5px solid purple;
+}
+.fox {
+    border: 5px solid red;
+}
+.wild {
+    border: 5px solid grey;
+}
+
+
+
